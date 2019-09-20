@@ -1,0 +1,54 @@
+NAMA	: AFDHOL BASIL OKTAVIAN
+NIM	: 5160311064
+KELAS	: SI A
+
+package PBO_5160311064;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+class mobil{
+    private String isi_merk;
+      private String isi_tipe;
+      private String get_jenis(){return isi_merk;}
+      private String get_model(){return isi_tipe;}
+      
+      private String gabungan(String isi1,String isi2){
+      return isi1 +""+isi2;
+      }
+      
+        public void merk(String isian)throws IllegalAccessException{
+            if(isian.equals("Ford")||isian.equals("Ferrari")| isian.equals("Honda"))
+                isi_merk=isian;
+            else
+                throw new IllegalAccessException("Maaf,Merk Mobil Yang Dimaksud Tidak Ditemukan");
+        }
+        public void tipe(String isian){
+            isi_tipe=isian;
+        }
+        public String get_fullname(){
+            return gabungan(get_jenis(), get_model());
+            }
+        }
+public class PBO_5160311064 {
+   
+    public static void main(String[] args) {
+     
+        try{
+            
+        mobil mobilku = new mobil();
+             mobilku.merk("Toyota");
+             mobilku.tipe("Kijang");
+        
+        System.out.println("Mobilku: ");
+            
+              String fullname = mobilku.get_fullname();
+              System.out.println("fullname");          
+        }catch(Exception e)
+        {
+              JOptionPane.showMessageDialog(null,e.getMessage());
+         }
+       }
+    }
+    

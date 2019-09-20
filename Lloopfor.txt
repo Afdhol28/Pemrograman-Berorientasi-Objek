@@ -1,0 +1,16 @@
+public class Lloopfor {
+     public static void main(String[] args) {
+         int n;
+         System.out.println("Mencetak dari 1 sampai 10");
+         for(n=1;n<=10;n++)
+             System.out.println("angka "+n);
+         System.out.println("mencetak dari 0,2,4,6,8,10");
+         for(n=0;n<=10;n+=2)
+              System.out.println("angka "+n);
+             System.out.println("mencetak dari 10,8,6,4,2");
+         for(n=10;n>=0;n-=2)
+             System.out.println("angka"+n);
+     }
+
+    
+}
